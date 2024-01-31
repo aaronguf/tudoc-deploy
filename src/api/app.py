@@ -6,7 +6,7 @@ from flask_jwt_extended import  JWTManager, create_access_token, jwt_required, g
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}}, supports_credentials=True)
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
 # ENCRIPTACION JWT y BCRYPT-------
 
@@ -119,4 +119,4 @@ def show_users():
 
 #al final ( detecta que encendimos el servidor desde terminal y nos da detalles de los errores )
 if __name__ == '__main__':
-    app.run(debug=True)
+        app.run(debug=True, host='0.0.0.0', port=5000)
