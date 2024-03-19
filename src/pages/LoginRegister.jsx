@@ -23,7 +23,7 @@ const LoginRegister = () => {
 
     return (
     <div>
-        <h2>Register</h2>
+        <h2>Nuevo registro</h2>
         <h3>Test store: {store.personas}</h3>
         <form>
         <div>
